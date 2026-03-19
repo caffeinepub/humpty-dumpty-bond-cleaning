@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Deep Forest Green primary palette */
+    --background: 0.99 0.002 90;
+    --foreground: 0.18 0.02 160;
+
+    --card: 1 0 0;
+    --card-foreground: 0.18 0.02 160;
+
+    --popover: 1 0 0;
+    --popover-foreground: 0.18 0.02 160;
+
+    /* Primary: vibrant forest green */
+    --primary: 0.52 0.18 155;
+    --primary-foreground: 0.99 0 0;
+
+    /* Secondary: soft sage */
+    --secondary: 0.94 0.04 155;
+    --secondary-foreground: 0.28 0.08 155;
+
+    --muted: 0.95 0.01 90;
+    --muted-foreground: 0.55 0.03 160;
+
+    /* Accent: warm gold */
+    --accent: 0.78 0.14 75;
+    --accent-foreground: 0.18 0.04 75;
+
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 0.99 0 0;
+
+    --border: 0.88 0.02 155;
+    --input: 0.88 0.02 155;
+    --ring: 0.52 0.18 155;
+
+    --radius: 0.5rem;
+
+    --chart-1: 0.52 0.18 155;
+    --chart-2: 0.65 0.14 155;
+    --chart-3: 0.78 0.14 75;
+    --chart-4: 0.42 0.18 155;
+    --chart-5: 0.35 0.12 155;
+
+    --sidebar: 0.97 0.01 155;
+    --sidebar-foreground: 0.18 0.02 160;
+    --sidebar-primary: 0.52 0.18 155;
+    --sidebar-primary-foreground: 0.99 0 0;
+    --sidebar-accent: 0.94 0.04 155;
+    --sidebar-accent-foreground: 0.28 0.08 155;
+    --sidebar-border: 0.88 0.02 155;
+    --sidebar-ring: 0.52 0.18 155;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display;
+  }
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Whatsapp float button pulse */
+@keyframes wa-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 oklch(0.52 0.18 155 / 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 12px oklch(0.52 0.18 155 / 0);
+  }
+}
+.wa-pulse {
+  animation: wa-pulse 2s ease-in-out infinite;
+}
